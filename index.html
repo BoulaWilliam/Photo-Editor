@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor00</title>
+    <!-- links -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Image Editor</h1>
+    <div class="container">
+        <div class="image-box">
+            <div class="img">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="upload">
+                <label for="upload">Upload</label>
+                <input type="file" id="upload">
+            </div>
+
+
+        </div>
+
+        <div class="filters">
+            <h2>Filters</h2>
+            <ul>
+
+                <li>
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" value="100" min="0" max="200">
+                </li>
+
+                <li>
+                    <label for="brightness"><i class='bx bx-brightness-half'></i>Brightness</label>
+                    <input type="range" id="brightness" value="100" min="0" max="200">
+                </li>
+
+                <li>
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" value="100" min="0" max="200">
+                </li>
+
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" value="0" min="0" max="200">
+                </li>
+
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" value="0" min="0" max="10" step=".1">
+                </li>
+
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" value="0" min="0" max="1" step=".1">
+                </li>
+
+                <li>
+                    <label for="hue-rotate">Hue Rotate</label>
+                    <input type="range" id="hue-rotate" min="0" max="350" value="0">
+                </li>
+
+                <li>
+                    <label for="invert">Invert</label>
+                    <input type="range" id="invert" value="0" min="0" max="100">
+                </li>
+
+            </ul>
+
+            
+        <div class="controls">
+            <span onclick="resetValue()">Reset Filters</span>
+            <a download="1" id="download">Download</a>
+        </div>
+
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
